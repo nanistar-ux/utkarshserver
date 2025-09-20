@@ -58,7 +58,7 @@
       <section class="card">
         <h2>✅ Processed Claim Result</h2>
         <pre id="apiResponse">{{ result | tojson(indent=2) }}</pre>
-        <a href="http://10.80.200.111:5001/" class="map-btn" target="_blank">View on Official Map</a>
+        <a href="http://10.212.239.250:5001/" class="map-btn" target="_blank">View on Official Map</a>
       </section>
     {% endif %}
 
@@ -71,7 +71,7 @@
     <!-- Map Section -->
     <section id="map" class="map-section">
       <h2>🌍 Live FRA Claim Map</h2>
-      <iframe src="http://10.80.200.111:5001/" frameborder="0" class="map-frame"></iframe>
+      <iframe src="http://10.212.239.250:5001/" frameborder="0" class="map-frame"></iframe>
     </section>
   </main>
 
@@ -84,3 +84,4 @@
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
