@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load Existing Claims
   async function loadExistingClaims() {
     try {
-      const response = await fetch("http://10.80.200.111:5001/api/claims", {
+      const response = await fetch("http://10.212.239.250:5001/api/claims", {
         headers: { "x-api-key": "SIH2025_SECRET_123" }
       });
       if (!response.ok) throw new Error(await response.text());
@@ -44,3 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadExistingClaims();
 });
+
