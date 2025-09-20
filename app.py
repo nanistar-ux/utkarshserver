@@ -10,8 +10,8 @@ app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecret")  # Can override in Render
 
 # Load API URLs and Keys from environment variables
-MODEL_API_URL = os.getenv("MODEL_API_URL", "http://10.80.200.111:8000/api/process_claim")
-WEBGIS_API_URL = os.getenv("WEBGIS_API_URL", "http://10.80.200.111:5001/api/claims")
+MODEL_API_URL = os.getenv("MODEL_API_URL", "http://10.212.239.250:8000/api/process_claim")
+WEBGIS_API_URL = os.getenv("WEBGIS_API_URL", "http://10.212.239.250:5001/api/claims")
 MODEL_API_KEY = os.getenv("MODEL_API_KEY")
 WEBGIS_API_KEY = os.getenv("WEBGIS_API_KEY")
 
@@ -76,3 +76,4 @@ def index():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
+
