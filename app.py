@@ -12,7 +12,7 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecret")  # Can override in
 # Load API URLs and Keys from environment variables
 MODEL_API_URL = os.getenv("MODEL_API_URL", "http://10.212.239.250:8000/api/process_claim")
 WEBGIS_API_URL = os.getenv("WEBGIS_API_URL", "http://10.212.239.250:5001/api/claims")
-MODEL_API_KEY = os.getenv("MODEL_API_KEY")
+MODEL_API_KEY = os.getenv("YOUR_SECRET_API_KEY_HERE")
 WEBGIS_API_KEY = os.getenv("WEBGIS_API_KEY")
 
 @app.route("/", methods=["GET", "POST"])
@@ -76,5 +76,6 @@ def index():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
+
 
 
